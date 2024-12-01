@@ -17,7 +17,7 @@ export const fetchLogin = createAsyncThunk(
   async (user: { username: string; password: string }, thunkApi) => {
     try {
       const res = await fetch(
-        `https://server-vp9y.onrender.com/api/users/login`,
+        `http://localhost:3031/api/users/login`,
         {
           method: "post",
           headers: {
@@ -44,7 +44,7 @@ export const fetchProfileUpdate = createAsyncThunk(
   async (id: string, thunkApi) => {
     try {
       const res = await fetch(
-        `https://server-vp9y.onrender.com/api/users/profile`,
+        `http://localhost:3031/api/users/profile`,
         {
           method: "post",
           headers: {

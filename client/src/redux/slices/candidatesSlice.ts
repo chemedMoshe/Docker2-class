@@ -17,7 +17,7 @@ export const fetchCandidates = createAsyncThunk(
   async (_, thunkApi) => {
     try {
       const res = await fetch(
-        `https://server-vp9y.onrender.com/api/candidates/`,
+        `http://localhost:3031/api/candidates/`,
         {
           headers: {
             Authorization: localStorage["Authorization"]!,

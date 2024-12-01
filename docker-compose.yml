@@ -17,17 +17,21 @@ services:
       dockerfile: Dockerfile
     container_name: vote-server
     ports:
-      - "3030:3000"
+      - "3031:3030"
     networks:
       - vote-network 
     depends_on:
       - mongo-db
+    environment:
+      - PORT=${PORT}
+      - DB_URI=${DB_URI}
+      - JWT_SECRET=${JWT_SECRET}
 
   mongo-db:
     image: mongo
     container_name: vote-mongo-db
     ports:
-      - "3031:27017"
+      - "3032:27017"
     networks:
       - vote-network
     restart:
