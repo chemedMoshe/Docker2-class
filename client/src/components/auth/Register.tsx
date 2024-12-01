@@ -16,7 +16,7 @@ export default function Register() {
 
   const handleRegister = async () => {
     try {
-        const res = await fetch(`https://server-vp9y.onrender.com/api/users/register`, {
+        const res = await fetch(`http://localhost:3031/api/users/register`, {
             method: "post",
             headers: {
               "Content-Type": "application/json",
